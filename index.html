@@ -24,7 +24,7 @@
 
   // Define timeline.
   var timeline = [];
-  // timeline = timeline.concat(instructions);      // Instructions
+  timeline = timeline.concat(instructions);      // Instructions
   timeline = timeline.concat(trials);            // Bandit task
 
   jsPsych.init({
@@ -36,7 +36,7 @@
       // Define output message.
       const msg = '<style>.demo-msg {height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-content: center; align-items: center; font-size: 28px; text-align: center}</style><div class="demo-msg"><p>Thank you for trying the demo!</p><p>The full code is publicly available at<br><a href="https://github.com/nivlab/ThreeArmJS">github.com/nivlab/ThreeArmJS</a></p></div>'
 
-      // Testing
+      // Display output message.
       document.write(msg);
 
     }

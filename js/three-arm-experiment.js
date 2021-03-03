@@ -9,7 +9,7 @@ const contexts = jsPsych.randomization.shuffle(['red','green','blue']);
 const choices = [37,38,39];    // left, top, right
 
 // Define timings.
-const choice_duration = 10000;
+const choice_duration = null;
 const feedback_duration = 1200;
 
 //------------------------------------//

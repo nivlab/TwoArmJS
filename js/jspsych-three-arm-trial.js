@@ -70,9 +70,9 @@ jsPsych.plugins["three-arm-trial"] = (function() {
 
     // Add task container.
     new_html += '<div class="fishing-wrap">';
+    const sides = ['left','top','right'];
 
     // Iteratively draw contexts.
-    const sides = ['left','top','right'];
     for (var i = 0; i < 3; i++) {
 
       // Open beach container.
@@ -96,13 +96,18 @@ jsPsych.plugins["three-arm-trial"] = (function() {
       new_html += `<div class="decal" side="${sides[i]}" context="${trial.contexts[i]}"></div>`;
       new_html += '</div>';
 
+      // End beach.
+      new_html += '</div>';
+
+    }
+
+    // Iteratively draw feedback.
+    for (var i = 0; i < 3; i++) {
+
       // Add feedback.
       new_html += `<div class="fish-container" id="fish-${sides[i]}">`;
       new_html += `<div class="fish" pattern="1" outcome="${trial.outcomes[i]}"></div>`;
       new_html += `<div class="fish" pattern="3" outcome="${trial.outcomes[i]}"></div>`;
-      new_html += '</div>';
-
-      // End beach.
       new_html += '</div>';
 
     }
