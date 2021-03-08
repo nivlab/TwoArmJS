@@ -15,8 +15,3 @@ build/
 *.db
 *.csv
 .DS_Store
-
-# project specific
-data/**
-metadata/**
-reject/**
